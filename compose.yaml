@@ -1,0 +1,14 @@
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MARIADB_USER: mariadb
+      MARIADB_PASSWORD: password
+      MARIADB_DATABASE: mariadb
+      MARIADB_ROOT_PASSWORD: password
+    ports:
+      - 127.0.0.1:3306:3306/tcp
+    volumes:
+      - mariadb-data:/var/lib/mysql
+volumes:
+  mariadb-data:

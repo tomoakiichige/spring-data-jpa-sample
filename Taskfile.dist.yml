@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  migrate-fresh:
+    cmds:
+      - atlas schema clean --env local
+      - atlas migrate apply --env local
